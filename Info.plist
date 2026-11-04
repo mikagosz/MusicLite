@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Audio</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.audio</string>
+				<string>public.mp3</string>
+				<string>com.apple.m4a-audio</string>
+				<string>public.aac-audio</string>
+				<string>com.microsoft.waveform-audio</string>
+				<string>public.aiff-audio</string>
+				<string>public.aifc-audio</string>
+				<string>com.apple.coreaudio-format</string>
+				<string>org.xiph.flac</string>
+				<string>com.microsoft.windows-media-wma</string>
+				<string>com.microsoft.advanced-systems-format</string>
+				<string>org.xiph.ogg-audio</string>
+				<string>org.xiph.opus</string>
+				<string>org.videolan.ape</string>
+				<string>org.videolan.wv</string>
+				<string>org.matroska.mka</string>
+				<string>com.mikagosz.musiclite.dsd</string>
+				<string>public.ac3-audio</string>
+				<string>public.enhanced-ac3-audio</string>
+				<string>org.3gpp.adaptive-multi-rate-audio</string>
+				<string>public.mp2</string>
+				<string>org.videolan.mpc</string>
+				<string>org.videolan.tta</string>
+				<string>public.au-audio</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>ogg</string>
+				<string>oga</string>
+				<string>opus</string>
+				<string>ape</string>
+				<string>wv</string>
+				<string>mka</string>
+				<string>mpc</string>
+				<string>tta</string>
+				<string>flac</string>
+				<string>wma</string>
+				<string>asf</string>
+				<string>ac3</string>
+				<string>eac3</string>
+				<string>amr</string>
+				<string>mp2</string>
+				<string>au</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Audio (by extension)</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Windows Media Video (sound only)</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.microsoft.windows-media-wmv</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.audio</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>DSD audio</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.mikagosz.musiclite.dsd</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>dsf</string>
+					<string>dff</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
