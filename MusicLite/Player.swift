@@ -305,7 +305,7 @@ final class Player: ObservableObject {
         }
         guard loadID == id, !Task.isCancelled else { return }
         engine = "ffmpeg"
-        loadingNote = "Dekoduję przez ffmpeg…"
+        loadingNote = String(localized: "Decoding with ffmpeg…")
         do {
             let file = try await FFmpeg.decode(url)
             // Another file was opened while ffmpeg worked: this one is no longer wanted.
@@ -314,7 +314,7 @@ final class Player: ObservableObject {
             if let length = await start(AVURLAsset(url: file), id), loadID == id {
                 return ready(length, autoplay: autoplay)
             }
-            if loadID == id { cleanUp(); nowPlaying?.clear(); state = .failed("Nie umiem odtworzyć tego pliku.") }
+            if loadID == id { cleanUp(); nowPlaying?.clear(); state = .failed(String(localized: "Can’t play this file.")) }
         } catch {
             if loadID == id, !(error is CancellationError) { nowPlaying?.clear(); state = .failed(error.localizedDescription) }
         }

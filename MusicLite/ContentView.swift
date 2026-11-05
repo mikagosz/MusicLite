@@ -41,7 +41,7 @@ struct ContentView: View {
     @ViewBuilder private var status: some View {
         switch player.state {
         case .empty:
-            Text("Przeciągnij tu plik muzyczny albo otwórz go (⌘O)")
+            Text("Drop a music file here or open one (⌘O)")
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, minHeight: 22)
         case .loading:
@@ -73,22 +73,22 @@ struct ContentView: View {
     private var controls: some View {
         HStack(spacing: player.queue.count > 1 ? 16 : 22) {
             if player.queue.count > 1 {
-                button("shuffle", player.shuffle ? "Losowo: włączone" : "Losowo: wyłączone") { player.shuffle.toggle() }
+                button("shuffle", player.shuffle ? "Shuffle: on" : "Shuffle: off") { player.shuffle.toggle() }
                     .foregroundStyle(player.shuffle ? Color.accentColor : .secondary)
-                button("backward.end.fill", "Poprzedni") { player.previous() }
+                button("backward.end.fill", "Previous") { player.previous() }
                     .disabled(!player.hasPrevious)
             }
-            button("gobackward.10", "10 s wstecz") { player.skip(-10) }
+            button("gobackward.10", "Skip back 10 s") { player.skip(-10) }
                 .keyboardShortcut(.leftArrow, modifiers: [])
-            button(player.isPlaying ? "pause.fill" : "play.fill", player.isPlaying ? "Pauza" : "Odtwórz", size: 26) {
+            button(player.isPlaying ? "pause.fill" : "play.fill", player.isPlaying ? "Pause" : "Play", size: 26) {
                 player.togglePlay()
             }
             .keyboardShortcut(.space, modifiers: [])
             .frame(width: 34)
-            button("goforward.10", "10 s naprzód") { player.skip(10) }
+            button("goforward.10", "Skip forward 10 s") { player.skip(10) }
                 .keyboardShortcut(.rightArrow, modifiers: [])
             if player.queue.count > 1 {
-                button("forward.end.fill", "Następny") { player.next() }
+                button("forward.end.fill", "Next") { player.next() }
                     .disabled(!player.hasNext)
             }
             button(player.repeatMode == .one ? "repeat.1" : "repeat", repeatHelp) {
@@ -103,13 +103,13 @@ struct ContentView: View {
         .disabled(player.state != .ready)
         .frame(maxWidth: .infinity)
         .overlay(alignment: .leading) {
-            button("slider.vertical.3", "Korektor i balans (⌥⌘E)") { showEQ.toggle() }
+            button("slider.vertical.3", "Equalizer and balance (⌥⌘E)") { showEQ.toggle() }
                 .keyboardShortcut("e", modifiers: [.command, .option])
                 .foregroundStyle(eq.isOn || eq.balance != 0 ? Color.accentColor : .primary)
                 .popover(isPresented: $showEQ, arrowEdge: .bottom) { EqualizerView() }
         }
         .overlay(alignment: .trailing) {
-            button(showList ? "chevron.up" : "list.bullet", showList ? "Zwiń listę" : "Lista utworów (⌘L)") {
+            button(showList ? "chevron.up" : "list.bullet", showList ? "Hide list" : "Song list (⌘L)") {
                 showList.toggle()
             }
             .keyboardShortcut("l")
@@ -132,13 +132,13 @@ struct ContentView: View {
                     Toggle(name, isOn: Binding(get: { player.playlistName == name }, set: { _ in playlists.open(name) }))
                 }
                 if playlists.names.isEmpty {
-                    Text("Brak zapisanych playlist")
+                    Text("No Saved Playlists")
                 }
                 Divider()
-                Button("Zapisz listę jako playlistę…") { playlists.saveCurrent() }
+                Button("Save List as Playlist…") { playlists.saveCurrent() }
                     .disabled(player.queue.isEmpty)
                 if !playlists.names.isEmpty {
-                    Menu("Usuń playlistę") {
+                    Menu("Delete Playlist") {
                         ForEach(playlists.names, id: \.self) { name in
                             Button(name) { playlists.delete(name) }
                         }
@@ -146,7 +146,7 @@ struct ContentView: View {
                 }
             } label: {
                 HStack(spacing: 4) {
-                    Text(player.playlistName ?? "Bieżąca lista")
+                    Text(player.playlistName ?? String(localized: "Current List"))
                         .fontWeight(player.playlistName == nil ? .regular : .semibold)
                         .lineLimit(1)
                     Image(systemName: "chevron.down")
@@ -157,13 +157,13 @@ struct ContentView: View {
             .menuStyle(.borderlessButton)
             .menuIndicator(.hidden)
             .fixedSize()
-            .help("Playlisty")
+            .help("Playlists")
             Text("\(player.queue.count)").foregroundStyle(.tertiary)
             Spacer()
-            button("plus", "Dodaj utwory lub foldery (⇧⌘O)") {
-                if let urls = MusicLiteApp.pick(title: "Dodaj do listy") { player.add(urls) }
+            button("plus", "Add songs or folders (⇧⌘O)") {
+                if let urls = MusicLiteApp.pick(title: String(localized: "Add to List")) { player.add(urls) }
             }
-            button("trash", "Wyczyść listę") { player.clear() }
+            button("trash", "Clear list") { player.clear() }
                 .disabled(player.queue.isEmpty)
         }
         .font(.callout)
@@ -203,14 +203,14 @@ struct ContentView: View {
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
-                            Button("Odtwórz") { player.play(at: row) }
-                            Button("Przesuń w górę") { player.move(row, by: -1) }
+                            Button("Play") { player.play(at: row) }
+                            Button("Move Up") { player.move(row, by: -1) }
                                 .disabled(row == 0)
-                            Button("Przesuń w dół") { player.move(row, by: 1) }
+                            Button("Move Down") { player.move(row, by: 1) }
                                 .disabled(row + 1 >= player.queue.count)
                             Divider()
-                            Button("Usuń z listy") { player.remove(at: row) }
-                            Button("Pokaż w Finderze") { NSWorkspace.shared.activateFileViewerSelecting([url]) }
+                            Button("Remove from List") { player.remove(at: row) }
+                            Button("Show in Finder") { NSWorkspace.shared.activateFileViewerSelecting([url]) }
                         }
                         .help(url.path)
                         .id(row)
@@ -223,7 +223,7 @@ struct ContentView: View {
             .frame(minHeight: listMinHeight, idealHeight: listIdealHeight, maxHeight: .infinity)
             .overlay {
                 if player.queue.isEmpty {
-                    Text("Lista jest pusta — przeciągnij tu utwory albo foldery").foregroundStyle(.secondary)
+                    Text("The list is empty — drop songs or folders here").foregroundStyle(.secondary)
                 }
             }
             .onAppear { proxy.scrollTo(player.index, anchor: .center) }
@@ -246,11 +246,11 @@ struct ContentView: View {
         CGFloat(String(player.queue.count).count) * 8 + 6
     }
 
-    private var repeatHelp: String {
+    private var repeatHelp: LocalizedStringKey {
         switch player.repeatMode {
-        case .off: "Powtarzanie: wyłączone"
-        case .all: "Powtarzanie: cała lista"
-        case .one: "Powtarzanie: jeden utwór"
+        case .off: "Repeat: off"
+        case .all: "Repeat: all songs"
+        case .one: "Repeat: one song"
         }
     }
 
@@ -260,7 +260,7 @@ struct ContentView: View {
         return "\(player.title)  (\(player.index + 1)/\(player.queue.count))"
     }
 
-    private func button(_ symbol: String, _ help: String, size: CGFloat = 17, action: @escaping () -> Void) -> some View {
+    private func button(_ symbol: String, _ help: LocalizedStringKey, size: CGFloat = 17, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Image(systemName: symbol).font(.system(size: size))
         }

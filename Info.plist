@@ -80,15 +80,15 @@
 		</dict>
 	</array>
 	<key>NSDesktopFolderUsageDescription</key>
-	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<string>MusicLite reads songs from the folders you open or add to the list.</string>
 	<key>NSDocumentsFolderUsageDescription</key>
-	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<string>MusicLite reads songs from the folders you open or add to the list.</string>
 	<key>NSDownloadsFolderUsageDescription</key>
-	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<string>MusicLite reads songs from the folders you open or add to the list.</string>
 	<key>NSNetworkVolumesUsageDescription</key>
-	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<string>MusicLite reads songs from the folders you open or add to the list.</string>
 	<key>NSRemovableVolumesUsageDescription</key>
-	<string>MusicLite czyta utwory z folderów, które otwierasz albo dodajesz do listy.</string>
+	<string>MusicLite reads songs from the folders you open or add to the list.</string>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

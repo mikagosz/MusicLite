@@ -7,7 +7,7 @@ import AppKit
 // the left channel three times: flat, with 1 kHz cut by 12 dB, and with the balance fully right.
 // `MusicLite --probe-switch <slow file> <file>` opens both muted, switches to the second while the
 // first is still loading and prints what the second loaded as. Tests/check.sh uses all three.
-// `MusicLite --set-default` does what the menu item "Ustaw MusicLite jako domyślny…" does,
+// `MusicLite --set-default` does what the menu item "Make MusicLite the Default Music Player" does,
 // for the formats MusicLite does not open yet.
 let args = CommandLine.arguments
 if args.count >= 3, args[1] == "--probe" {
@@ -72,7 +72,7 @@ if args.count >= 2, args[1] == "--set-default" {
     Task { @MainActor in
         let todo = DefaultApp.missing
         let failed = await DefaultApp.claim(todo)
-        print("Formaty: \(DefaultApp.types.count), do zmiany: \(todo.count), błędy: \(failed.count)")
+        print(String(localized: "Formats: \(DefaultApp.types.count), to change: \(todo.count), errors: \(failed.count)"))
         failed.forEach { print("  \($0)") }
         exit(failed.isEmpty ? 0 : 1)
     }

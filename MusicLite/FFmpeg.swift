@@ -11,7 +11,7 @@ enum FFmpeg {
 
         var errorDescription: String? {
             switch self {
-            case .missing: "Ten format gram przez ffmpeg, a go nie ma. Zainstaluj: brew install ffmpeg"
+            case .missing: String(localized: "This format needs ffmpeg, which isn’t installed. Install it with: brew install ffmpeg")
             case .failed(let message): message
             }
         }
@@ -43,7 +43,7 @@ enum FFmpeg {
             try? FileManager.default.removeItem(at: out)
             if Task.isCancelled { throw CancellationError() }
             let line = result.err.split(separator: "\n").last.map(String.init)
-            throw Failure.failed(line ?? "ffmpeg nie odczytał tego pliku.")
+            throw Failure.failed(line ?? String(localized: "ffmpeg couldn’t read this file."))
         }
         return out
     }

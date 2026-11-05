@@ -14,7 +14,7 @@ that starts instantly and handles almost any audio format you have, from MP3 to 
 [![macOS 14+](https://img.shields.io/badge/macOS-14%2B-000000?logo=apple&logoColor=white)](https://www.apple.com/macos)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> The interface is in Polish.
+> English and Polish — the app follows your macOS language (English for any language other than Polish).
 
 <p align="center">
   <img src="docs/assets/musiclite-hero.png" width="100%" alt="A laptop showing two MusicLite windows: one with the song list unfolded, one with the ten-band equalizer open, the Now Playing indicator in the menu bar and the MusicLite icon in the Dock">
@@ -48,7 +48,7 @@ column still plays.
   Repeat cycles off → whole list → one song. Both are kept between launches.
 - **Playlists.** Songs dropped on the window, or added with **+** (⇧⌘O), join the list, so one list can collect
   songs from many folders. Right-click a row to move it, remove it or show it in Finder. ⌘S saves the list as a
-  playlist: a plain M3U8 file with full paths, opened again from the Playlisty menu or from the name above the list.
+  playlist: a plain M3U8 file with full paths, opened again from the Playlists menu or from the name above the list.
   Songs moved or deleted since are skipped, and MusicLite says how many.
 - **Equalizer.** Ten bands (32 Hz–16 kHz, ±12 dB), a preamp and left/right balance (⌥⌘E). The presets are the
   ones from Apple's Music app, with the same values.
@@ -60,7 +60,7 @@ Keys: Space play/pause, ← → 10 s back/forward, ⌘O open, ⇧⌘O add to the
 ## Default player
 
 MusicLite registers as an owner of every format in the table, so Finder's **Open With** offers it at once.
-To make it the app Finder opens for all of them: app menu → *Ustaw MusicLite jako domyślny odtwarzacz muzyki*,
+To make it the app Finder opens for all of them: app menu → *Make MusicLite the Default Music Player*,
 or `MusicLite --set-default` from Terminal. Only formats that MusicLite does not open yet are changed; macOS asks
 to confirm each format that already has an app chosen, and a format refused there stays as it was.
 
@@ -86,7 +86,7 @@ killed; after an uninstall, macOS clears them on its own.
 ./build.sh
 ```
 
-Runs the checks in `Tests/check.sh`, builds the Release configuration, installs to `~/Applications`
+Builds the Release configuration, runs the checks in `Tests/check.sh`, installs to `~/Applications`
 (or the folder named in an untracked `.install-dir`) and starts the app. `--no-open` installs without starting it.
 
 ## Licence

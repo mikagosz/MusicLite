@@ -12,33 +12,33 @@ struct MusicLiteApp: App {
         .windowResizability(.contentSize)
         .commands {
             CommandGroup(replacing: .newItem) {
-                Button("Otwórz…") {
-                    if let urls = Self.pick(title: "Otwórz") { Player.shared.open(urls) }
+                Button("Open…") {
+                    if let urls = Self.pick(title: String(localized: "Open")) { Player.shared.open(urls) }
                 }
                 .keyboardShortcut("o")
-                Button("Dodaj do listy…") {
-                    if let urls = Self.pick(title: "Dodaj do listy") { Player.shared.add(urls) }
+                Button("Add to List…") {
+                    if let urls = Self.pick(title: String(localized: "Add to List")) { Player.shared.add(urls) }
                 }
                 .keyboardShortcut("o", modifiers: [.command, .shift])
                 Divider()
-                Button("Zapisz listę jako playlistę…") { playlists.saveCurrent() }
+                Button("Save List as Playlist…") { playlists.saveCurrent() }
                     .keyboardShortcut("s")
             }
-            CommandMenu("Playlisty") {
+            CommandMenu("Playlists") {
                 if playlists.names.isEmpty {
-                    Text("Brak zapisanych playlist")
+                    Text("No Saved Playlists")
                 }
                 ForEach(playlists.names, id: \.self) { name in
                     Button(name) { playlists.open(name) }
                 }
                 Divider()
-                Button("Pokaż folder playlist w Finderze") {
+                Button("Show Playlists Folder in Finder") {
                     try? FileManager.default.createDirectory(at: playlists.folder, withIntermediateDirectories: true)
                     NSWorkspace.shared.open(playlists.folder)
                 }
             }
             CommandGroup(after: .appInfo) {
-                Button("Ustaw MusicLite jako domyślny odtwarzacz muzyki") { Task { await DefaultApp.claimFromMenu() } }
+                Button("Make MusicLite the Default Music Player") { Task { await DefaultApp.claimFromMenu() } }
             }
         }
     }
@@ -114,27 +114,26 @@ enum DefaultApp {
         guard !isClaiming else { return }
         let todo = missing
         guard !todo.isEmpty else {
-            alert("MusicLite już otwiera wszystkie formaty muzyki.", "Formaty: \(types.count).")
+            alert(String(localized: "MusicLite already opens every music format."),
+                  String(localized: "Formats: \(types.count)."))
             return
         }
         let ask = NSAlert()
-        ask.messageText = "Ustawić MusicLite jako domyślny? Formaty do zmiany: \(todo.count)."
-        ask.informativeText = """
-            macOS może zapytać o każdy z nich w osobnym okienku — kliknij w nim „Używaj MusicLite”. \
-            Formaty, które MusicLite już otwiera, pomijam.
-
-            \(todo.map { $0.preferredFilenameExtension ?? $0.identifier }.joined(separator: ", "))
-            """
-        ask.addButton(withTitle: "Ustaw")
-        ask.addButton(withTitle: "Anuluj")
+        ask.messageText = String(localized: "Make MusicLite the default? Formats to change: \(todo.count).")
+        ask.informativeText = String(localized: """
+            macOS may ask about each one in a separate dialog — click Use “MusicLite” there. \
+            Formats MusicLite already opens are skipped.
+            """) + "\n\n" + todo.map { $0.preferredFilenameExtension ?? $0.identifier }.joined(separator: ", ")
+        ask.addButton(withTitle: String(localized: "Set"))
+        ask.addButton(withTitle: String(localized: "Cancel"))
         guard ask.runModal() == .alertFirstButtonReturn else { return }
 
         isClaiming = true
         defer { isClaiming = false }
         let failed = await claim(todo)
         alert(failed.isEmpty
-              ? "Gotowe. Zmienione formaty: \(todo.count)."
-              : "Nie udało się dla \(failed.count) z \(todo.count) formatów.",
+              ? String(localized: "Done. Formats changed: \(todo.count).")
+              : String(localized: "Failed for \(failed.count) of \(todo.count) formats."),
               failed.joined(separator: "\n"))
     }
 

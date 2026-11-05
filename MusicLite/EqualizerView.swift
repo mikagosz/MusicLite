@@ -7,19 +7,20 @@ struct EqualizerView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
-                Toggle("Korektor", isOn: $eq.isOn)
+                Toggle("Equalizer", isOn: $eq.isOn)
                     .toggleStyle(.switch)
                 Spacer()
-                Menu(eq.preset) {
+                Menu(Equalizer.displayName(eq.preset)) {
                     ForEach(Equalizer.presets, id: \.name) { preset in
-                        Button(preset.name) { eq.choose(preset.name) }
+                        Button(Equalizer.displayName(preset.name)) { eq.choose(preset.name) }
                     }
                 }
                 .frame(width: 200)
             }
 
             HStack(alignment: .top, spacing: 6) {
-                band("Wzm.", value: $eq.preamp, help: "Przedwzmacniacz — ścisz, gdy podbite pasma przesterowują")
+                band(String(localized: "Pre", comment: "Short label under the preamp slider"), value: $eq.preamp,
+                     help: String(localized: "Preamp — turn it down when boosted bands distort"))
                 Divider().frame(height: 150)
                 scale
                 ForEach(Equalizer.bands.indices, id: \.self) { n in
@@ -33,18 +34,18 @@ struct EqualizerView: View {
             Divider()
 
             HStack(spacing: 8) {
-                Text("Balans")
+                Text("Balance")
                 Text("L").foregroundStyle(.secondary)
                 Slider(value: $eq.balance, in: -1...1)
-                    .accessibilityLabel("Balans lewo–prawo")
-                Text("P").foregroundStyle(.secondary)
-                Button("Środek") { eq.balance = 0 }
+                    .accessibilityLabel("Balance left–right")
+                Text("R", comment: "Right channel").foregroundStyle(.secondary)
+                Button("Center") { eq.balance = 0 }
                     .disabled(eq.balance == 0)
             }
 
             HStack {
                 Spacer()
-                Button("Wyzeruj wszystko") { eq.reset() }
+                Button("Reset All") { eq.reset() }
             }
         }
         .padding(16)

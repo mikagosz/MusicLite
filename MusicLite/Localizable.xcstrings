@@ -1,0 +1,966 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "A playlist named “%@” already exists. Replace it?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Playlista „%@” już jest. Zastąpić ją?"
+          }
+        }
+      }
+    },
+    "Add songs or folders (⇧⌘O)": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj utwory lub foldery (⇧⌘O)"
+          }
+        }
+      }
+    },
+    "Add to List": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj do listy"
+          }
+        }
+      }
+    },
+    "Add to List…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj do listy…"
+          }
+        }
+      }
+    },
+    "Akustyczna": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acoustic"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akustyczna"
+          }
+        }
+      }
+    },
+    "Balance": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balans"
+          }
+        }
+      }
+    },
+    "Balance left–right": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balans lewo–prawo"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        }
+      }
+    },
+    "Can’t play this file.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie umiem odtworzyć tego pliku."
+          }
+        }
+      }
+    },
+    "Center": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Środek"
+          }
+        }
+      }
+    },
+    "Clear list": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyczyść listę"
+          }
+        }
+      }
+    },
+    "Couldn’t save the playlist.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się zapisać playlisty."
+          }
+        }
+      }
+    },
+    "Current List": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bieżąca lista"
+          }
+        }
+      }
+    },
+    "Decoding with ffmpeg…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dekoduję przez ffmpeg…"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń"
+          }
+        }
+      }
+    },
+    "Delete Playlist": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń playlistę"
+          }
+        }
+      }
+    },
+    "Delete the playlist “%@”?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usunąć playlistę „%@”?"
+          }
+        }
+      }
+    },
+    "Done. Formats changed: %lld.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gotowe. Zmienione formaty: %lld."
+          }
+        }
+      }
+    },
+    "Drop a music file here or open one (⌘O)": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przeciągnij tu plik muzyczny albo otwórz go (⌘O)"
+          }
+        }
+      }
+    },
+    "Elektroniczna": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Electronic"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elektroniczna"
+          }
+        }
+      }
+    },
+    "Equalizer": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Korektor"
+          }
+        }
+      }
+    },
+    "Equalizer and balance (⌥⌘E)": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Korektor i balans (⌥⌘E)"
+          }
+        }
+      }
+    },
+    "Failed for %lld of %lld formats.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się dla %1$lld z %2$lld formatów."
+          }
+        }
+      }
+    },
+    "Formats: %lld, to change: %lld, errors: %lld": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formaty: %1$lld, do zmiany: %2$lld, błędy: %3$lld"
+          }
+        }
+      }
+    },
+    "Formats: %lld.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formaty: %lld."
+          }
+        }
+      }
+    },
+    "Głośność": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loudness"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Głośność"
+          }
+        }
+      }
+    },
+    "Głębia": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deep"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Głębia"
+          }
+        }
+      }
+    },
+    "Hide list": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zwiń listę"
+          }
+        }
+      }
+    },
+    "Klasyczna": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classical"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klasyczna"
+          }
+        }
+      }
+    },
+    "Korekcja zerowa": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flat"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Korekcja zerowa"
+          }
+        }
+      }
+    },
+    "L": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L"
+          }
+        }
+      }
+    },
+    "Latynoska": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latin"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latynoska"
+          }
+        }
+      }
+    },
+    "Make MusicLite the Default Music Player": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustaw MusicLite jako domyślny odtwarzacz muzyki"
+          }
+        }
+      }
+    },
+    "Make MusicLite the default? Formats to change: %lld.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawić MusicLite jako domyślny? Formaty do zmiany: %lld."
+          }
+        }
+      }
+    },
+    "Małe głośniki": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Small Speakers"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Małe głośniki"
+          }
+        }
+      }
+    },
+    "Missing files: %lld of %lld.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brakuje plików: %1$lld z %2$lld."
+          }
+        }
+      }
+    },
+    "Mniej basów": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bass Reducer"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mniej basów"
+          }
+        }
+      }
+    },
+    "Mniej wysokich tonów": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Treble Reducer"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mniej wysokich tonów"
+          }
+        }
+      }
+    },
+    "Move Down": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przesuń w dół"
+          }
+        }
+      }
+    },
+    "Move Up": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przesuń w górę"
+          }
+        }
+      }
+    },
+    "MusicLite already opens every music format.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MusicLite już otwiera wszystkie formaty muzyki."
+          }
+        }
+      }
+    },
+    "Next": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Następny"
+          }
+        }
+      }
+    },
+    "No Saved Playlists": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak zapisanych playlist"
+          }
+        }
+      }
+    },
+    "Open": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz"
+          }
+        }
+      }
+    },
+    "Open…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz…"
+          }
+        }
+      }
+    },
+    "Pause": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pauza"
+          }
+        }
+      }
+    },
+    "Pianino": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piano"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pianino"
+          }
+        }
+      }
+    },
+    "Play": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odtwórz"
+          }
+        }
+      }
+    },
+    "Playlist name": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nazwa playlisty"
+          }
+        }
+      }
+    },
+    "Playlists": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Playlisty"
+          }
+        }
+      }
+    },
+    "Pre": {
+      "comment": "Short label under the preamp slider",
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wzm."
+          }
+        }
+      }
+    },
+    "Preamp — turn it down when boosted bands distort": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przedwzmacniacz — ścisz, gdy podbite pasma przesterowują"
+          }
+        }
+      }
+    },
+    "Previous": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poprzedni"
+          }
+        }
+      }
+    },
+    "R": {
+      "comment": "Right channel",
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "P"
+          }
+        }
+      }
+    },
+    "Recytacje": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spoken Word"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recytacje"
+          }
+        }
+      }
+    },
+    "Remove from List": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń z listy"
+          }
+        }
+      }
+    },
+    "Repeat: all songs": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Powtarzanie: cała lista"
+          }
+        }
+      }
+    },
+    "Repeat: off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Powtarzanie: wyłączone"
+          }
+        }
+      }
+    },
+    "Repeat: one song": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Powtarzanie: jeden utwór"
+          }
+        }
+      }
+    },
+    "Replace": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zastąp"
+          }
+        }
+      }
+    },
+    "Reset All": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyzeruj wszystko"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz"
+          }
+        }
+      }
+    },
+    "Save List as Playlist": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz listę jako playlistę"
+          }
+        }
+      }
+    },
+    "Save List as Playlist…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz listę jako playlistę…"
+          }
+        }
+      }
+    },
+    "Set": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustaw"
+          }
+        }
+      }
+    },
+    "Show Playlists Folder in Finder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż folder playlist w Finderze"
+          }
+        }
+      }
+    },
+    "Show in Finder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż w Finderze"
+          }
+        }
+      }
+    },
+    "Shuffle: off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Losowo: wyłączone"
+          }
+        }
+      }
+    },
+    "Shuffle: on": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Losowo: włączone"
+          }
+        }
+      }
+    },
+    "Skip back 10 s": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10 s wstecz"
+          }
+        }
+      }
+    },
+    "Skip forward 10 s": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10 s naprzód"
+          }
+        }
+      }
+    },
+    "Song list (⌘L)": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lista utworów (⌘L)"
+          }
+        }
+      }
+    },
+    "Songs: %lld.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwory: %lld."
+          }
+        }
+      }
+    },
+    "The list is empty — drop songs or folders here": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lista jest pusta — przeciągnij tu utwory albo foldery"
+          }
+        }
+      }
+    },
+    "The songs stay on disk — only the list is deleted.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwory zostają na dysku — znika tylko lista."
+          }
+        }
+      }
+    },
+    "They were moved or deleted. Playing the rest — save the playlist to drop them from it.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zostały przeniesione albo usunięte. Gram resztę; zapisz playlistę, żeby o nich zapomniała."
+          }
+        }
+      }
+    },
+    "This format needs ffmpeg, which isn’t installed. Install it with: brew install ffmpeg": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten format gram przez ffmpeg, a go nie ma. Zainstaluj: brew install ffmpeg"
+          }
+        }
+      }
+    },
+    "Więcej basów": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bass Booster"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Więcej basów"
+          }
+        }
+      }
+    },
+    "Więcej wokali": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vocal Booster"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Więcej wokali"
+          }
+        }
+      }
+    },
+    "Więcej wysokich tonów": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Treble Booster"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Więcej wysokich tonów"
+          }
+        }
+      }
+    },
+    "Własne": {
+      "comment": "Equalizer preset (Apple Music's name); the key is what gets saved",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Własne"
+          }
+        }
+      }
+    },
+    "ffmpeg couldn’t read this file.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ffmpeg nie odczytał tego pliku."
+          }
+        }
+      }
+    },
+    "macOS may ask about each one in a separate dialog — click Use “MusicLite” there. Formats MusicLite already opens are skipped.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS może zapytać o każdy z nich w osobnym okienku — kliknij w nim „Używaj MusicLite”. Formaty, które MusicLite już otwiera, pomijam."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

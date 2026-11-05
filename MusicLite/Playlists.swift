@@ -42,8 +42,8 @@ final class Playlists: ObservableObject {
     func open(_ name: String) {
         let (found, missing) = songs(name)
         if missing > 0 {
-            alert("Brakuje plików: \(missing) z \(found.count + missing).",
-                  "Zostały przeniesione albo usunięte. Gram resztę; zapisz playlistę, żeby o nich zapomniała.")
+            alert(String(localized: "Missing files: \(missing) of \(found.count + missing)."),
+                  String(localized: "They were moved or deleted. Playing the rest — save the playlist to drop them from it."))
         }
         if found.isEmpty { return }
         Player.shared.open(found, playlist: name)
@@ -55,13 +55,13 @@ final class Playlists: ObservableObject {
         guard !player.queue.isEmpty else { return }
         let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 260, height: 24))
         field.stringValue = player.playlistName ?? ""
-        field.placeholderString = "Nazwa playlisty"
+        field.placeholderString = String(localized: "Playlist name")
         let ask = NSAlert()
-        ask.messageText = "Zapisz listę jako playlistę"
-        ask.informativeText = "Utwory: \(player.queue.count)."
+        ask.messageText = String(localized: "Save List as Playlist")
+        ask.informativeText = String(localized: "Songs: \(player.queue.count).")
         ask.accessoryView = field
-        ask.addButton(withTitle: "Zapisz")
-        ask.addButton(withTitle: "Anuluj")
+        ask.addButton(withTitle: String(localized: "Save"))
+        ask.addButton(withTitle: String(localized: "Cancel"))
         ask.window.initialFirstResponder = field
         guard ask.runModal() == .alertFirstButtonReturn else { return }
         // "/" and ":" cannot stand in a file name; a leading dot would hide the file.
@@ -70,17 +70,18 @@ final class Playlists: ObservableObject {
             .trimmingCharacters(in: CharacterSet(charactersIn: "."))
         guard !name.isEmpty else { return }
         if names.contains(name), name != player.playlistName,
-           !confirm("Playlista „\(name)” już jest. Zastąpić ją?", "Zastąp") { return }
+           !confirm(String(localized: "A playlist named “\(name)” already exists. Replace it?"), String(localized: "Replace")) { return }
         do {
             try save(player.queue, as: name)
             player.playlistName = name
         } catch {
-            alert("Nie udało się zapisać playlisty.", error.localizedDescription)
+            alert(String(localized: "Couldn’t save the playlist."), error.localizedDescription)
         }
     }
 
     func delete(_ name: String) {
-        guard confirm("Usunąć playlistę „\(name)”?", "Usuń", details: "Utwory zostają na dysku — znika tylko lista.") else { return }
+        guard confirm(String(localized: "Delete the playlist “\(name)”?"), String(localized: "Delete"),
+                      details: String(localized: "The songs stay on disk — only the list is deleted.")) else { return }
         try? FileManager.default.trashItem(at: file(name), resultingItemURL: nil)
         if Player.shared.playlistName == name { Player.shared.playlistName = nil }
         reload()
@@ -91,7 +92,7 @@ final class Playlists: ObservableObject {
         ask.messageText = message
         ask.informativeText = details
         ask.addButton(withTitle: button)
-        ask.addButton(withTitle: "Anuluj")
+        ask.addButton(withTitle: String(localized: "Cancel"))
         return ask.runModal() == .alertFirstButtonReturn
     }
 

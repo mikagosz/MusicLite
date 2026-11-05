@@ -12,6 +12,12 @@ final class Equalizer: ObservableObject {
     static let flat = "Korekcja zerowa"
     static let custom = "Własne"
 
+    /// What the menu shows: the names below are also what gets saved (`eqPreset`), so they stay
+    /// as they were and Localizable.xcstrings gives them Apple Music's English names.
+    static func displayName(_ name: String) -> String {
+        Bundle.main.localizedString(forKey: name, value: name, table: nil)
+    }
+
     /// Apple Music's presets, names as its Polish version shows them. Values in dB, read from
     /// ~/Library/Preferences/com.apple.Music.eq.plist (2026-10-27), all with the preamp at 0.
     static let presets: [(name: String, gains: [Float])] = [
