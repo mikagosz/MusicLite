@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0000000000000000000E1A /* ErrorUpdate in Frameworks */ = {isa = PBXBuildFile; productRef = 6A0000000000000000000E2A /* ErrorUpdate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A0000000000000000000E1A /* ErrorUpdate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +70,7 @@
 			);
 			name = MusicLite;
 			packageProductDependencies = (
+				6A0000000000000000000E2A /* ErrorUpdate */,
 			);
 			productName = MusicLite;
 			productReference = 6A000000000000000000003A /* MusicLite.app */;
@@ -99,6 +102,7 @@
 			mainGroup = 6A000000000000000000005A;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				6A0000000000000000000E3A /* XCRemoteSwiftPackageReference "ErrorUpdate" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A000000000000000000006A /* Products */;
@@ -236,7 +240,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.20;
+				MARKETING_VERSION = 0.1.22;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikagosz.MusicLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -264,7 +268,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.20;
+				MARKETING_VERSION = 0.1.22;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikagosz.MusicLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -296,6 +300,24 @@
 /* End XCConfigurationList section */
 
 
+/* Begin XCRemoteSwiftPackageReference section */
+		6A0000000000000000000E3A /* XCRemoteSwiftPackageReference "ErrorUpdate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mikagosz/ErrorUpdate.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.0.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A0000000000000000000E2A /* ErrorUpdate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A0000000000000000000E3A /* XCRemoteSwiftPackageReference "ErrorUpdate" */;
+			productName = ErrorUpdate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A000000000000000000001A /* Project object */;
 }

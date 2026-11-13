@@ -86,4 +86,15 @@ LIST="$("$BIN" --list "$DIR/skroty/ulubiony.mp3" | nfc | tr '\n' '|')"
 LEFT="$(ls "${TMPDIR:-/tmp}" | grep -c '^MusicLite-' || true)"
 [ "$LEFT" = 0 ] && echo "  ok   brak plików tymczasowych (także po zabitym programie)" || { echo "  FAIL zostało $LEFT plików MusicLite-*"; FAIL=1; }
 
+echo "Aktualizacje:"
+# UpdateSupport.swift alone (Foundation only), compiled next to its headless check.
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+# Top-level code has to sit in a file named main.swift once there are two files.
+cp "$ROOT/Tests/updates.swift" "$DIR/main.swift"
+if swiftc -o "$DIR/updates" "$DIR/main.swift" "$ROOT/MusicLite/UpdateSupport.swift" 2> "$DIR/updates.log"; then
+  "$DIR/updates" || FAIL=1
+else
+  echo "  FAIL test aktualizacji się nie skompilował:"; cat "$DIR/updates.log"; FAIL=1
+fi
+
 [ "$FAIL" = 0 ] && echo "Testy: wszystko ok" || { echo "Testy: są błędy"; exit 1; }

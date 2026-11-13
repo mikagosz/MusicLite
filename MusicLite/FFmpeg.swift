@@ -42,8 +42,9 @@ enum FFmpeg {
         guard result.status == 0, !Task.isCancelled else {
             try? FileManager.default.removeItem(at: out)
             if Task.isCancelled { throw CancellationError() }
-            let line = result.err.split(separator: "\n").last.map(String.init)
-            throw Failure.failed(line ?? String(localized: "ffmpeg couldn’t read this file."))
+            // ffmpeg's own line ("Invalid data found when processing input") means nothing
+            // to a listener and is always English; the window shows a plain sentence instead.
+            throw Failure.failed(String(localized: "The file is damaged or has no sound."))
         }
         return out
     }

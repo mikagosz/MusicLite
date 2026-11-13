@@ -55,6 +55,11 @@ column still plays.
 - **Now Playing.** The song shows in Control Center (title, cover art from the file, position) and answers the media
   keys and headphone buttons: play/pause, next, previous (rewinds first when the song is past 3 s), and seeking.
 
+- **Updates.** Once a month MusicLite asks fractal8.eu for the number of the newest version — nothing else is
+  sent. A newer one opens a window with *Install and Restart*, *Skip This Version* and a manual download; nothing
+  installs without a click. App menu → *Check for Updates…* asks now, and *Check for Updates Automatically*
+  switches the monthly check off.
+
 Keys: Space play/pause, ← → 10 s back/forward, ⌘O open, ⇧⌘O add to the list, ⌘L song list, ⌘S save playlist.
 
 ## Default player
@@ -73,8 +78,10 @@ to confirm each format that already has an app chosen, and a format refused ther
 
 Move `MusicLite.app` to the Trash, then remove what it leaves behind:
 
-- `~/Library/Preferences/com.mikagosz.MusicLite.plist` — its settings (list shown, shuffle, repeat, equalizer).
+- `~/Library/Preferences/com.mikagosz.MusicLite.plist` — its settings (list shown, shuffle, repeat, equalizer, updates).
 - `~/Library/Application Support/MusicLite/` — saved playlists.
+- `~/Library/Application Support/com.mikagosz.MusicLite/` — made by the update library; crash reporting is off,
+  so it stays empty.
 - File associations: formats set to MusicLite go back to another app via Finder → Get Info → Open with → Change All.
 
 Temporary files `MusicLite-*` in the user's temporary folder are removed by MusicLite itself, also after it was

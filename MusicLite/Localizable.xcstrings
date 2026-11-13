@@ -859,6 +859,16 @@
         }
       }
     },
+    "The file is damaged or has no sound.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plik jest uszkodzony albo nie zawiera dźwięku."
+          }
+        }
+      }
+    },
     "This format needs ffmpeg, which isn’t installed. Install it with: brew install ffmpeg": {
       "localizations": {
         "pl": {
@@ -941,22 +951,222 @@
         }
       }
     },
-    "ffmpeg couldn’t read this file.": {
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ffmpeg nie odczytał tego pliku."
-          }
-        }
-      }
-    },
     "macOS may ask about each one in a separate dialog — click Use “MusicLite” there. Formats MusicLite already opens are skipped.": {
       "localizations": {
         "pl": {
           "stringUnit": {
             "state": "translated",
             "value": "macOS może zapytać o każdy z nich w osobnym okienku — kliknij w nim „Używaj MusicLite”. Formaty, które MusicLite już otwiera, pomijam."
+          }
+        }
+      }
+    },
+    "A newer version is available": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jest nowsza wersja"
+          }
+        }
+      }
+    },
+    "Check for Updates…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdź aktualizacje…"
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknij"
+          }
+        }
+      }
+    },
+    "Could not check for updates": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się sprawdzić aktualizacji"
+          }
+        }
+      }
+    },
+    "Could not download the new version.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się pobrać nowej wersji."
+          }
+        }
+      }
+    },
+    "Could not install the new version. The app keeps running the current one.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się zainstalować nowej wersji. Program dalej działa w obecnej wersji."
+          }
+        }
+      }
+    },
+    "Download manually and replace it yourself": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pobierz ręcznie i zastąp program samodzielnie"
+          }
+        }
+      }
+    },
+    "Install and Restart": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zainstaluj i uruchom ponownie"
+          }
+        }
+      }
+    },
+    "Skip This Version": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pomiń tę wersję"
+          }
+        }
+      }
+    },
+    "The app is busy — click again in a moment.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Program jest zajęty — kliknij ponownie za chwilę."
+          }
+        }
+      }
+    },
+    "The app sits where it cannot be overwritten (e.g. opened straight from Downloads). Move it to the Applications folder or download the new version manually.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Program leży w miejscu, którego nie da się nadpisać (np. otwarty prosto z folderu Pobrane). Przenieś go do folderu Programy albo pobierz nową wersję ręcznie."
+          }
+        }
+      }
+    },
+    "The new version is installed, but the restart failed. Quit and reopen the app manually.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nowa wersja jest zainstalowana, ale restart się nie udał. Zamknij i otwórz program ręcznie."
+          }
+        }
+      }
+    },
+    "The package address leads outside fractal8.eu — the app will not download it.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adres paczki prowadzi poza serwer fractal8.eu — program jej nie pobierze."
+          }
+        }
+      }
+    },
+    "Version %@.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wersja %@."
+          }
+        }
+      }
+    },
+    "You are up to date": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masz najnowszą wersję"
+          }
+        }
+      }
+    },
+    "You have %@, version %@ is available.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masz %@, dostępna jest %@."
+          }
+        }
+      }
+    },
+    "Downloading and verifying the package…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pobieram i sprawdzam paczkę…"
+          }
+        }
+      }
+    },
+    "Installing — the app will restart in a moment…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instaluję — za chwilę program uruchomi się ponownie…"
+          }
+        }
+      }
+    },
+    "Check for Updates Automatically": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdzaj aktualizacje automatycznie"
+          }
+        }
+      }
+    },
+    "MusicLite — Update": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MusicLite — aktualizacja"
+          }
+        }
+      }
+    },
+    "The app downloads the new version, checks it, replaces itself and restarts. Your playlists, equalizer and settings stay.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Program pobierze nową wersję, sprawdzi ją, podmieni się i uruchomi ponownie. Playlisty, korektor i ustawienia zostają."
           }
         }
       }

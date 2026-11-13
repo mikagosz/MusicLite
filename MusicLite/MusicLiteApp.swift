@@ -4,6 +4,8 @@ import UniformTypeIdentifiers
 struct MusicLiteApp: App {
     @NSApplicationDelegateAdaptor private var delegate: AppDelegate
     @ObservedObject private var playlists = Playlists.shared
+    /// Mirrors `Updates.enabled` so the menu's tick follows the switch.
+    @AppStorage(Setting.checkUpdates) private var checkUpdates = true
 
     var body: some Scene {
         Window("MusicLite", id: "main") {
@@ -38,6 +40,12 @@ struct MusicLiteApp: App {
                 }
             }
             CommandGroup(after: .appInfo) {
+                Button("Check for Updates…") { Task { await Updates.shared.check(manually: true) } }
+                // Updates are always optional: off here, MusicLite never asks the server by itself.
+                Toggle("Check for Updates Automatically", isOn: Binding(
+                    get: { checkUpdates },
+                    set: { Updates.shared.enabled = $0 }))
+                Divider()
                 Button("Make MusicLite the Default Music Player") { Task { await DefaultApp.claimFromMenu() } }
             }
         }
@@ -59,6 +67,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     /// Finder's "open" (double click, Open With, dropping on the Dock icon).
     func application(_ application: NSApplication, open urls: [URL]) {
         MainActor.assumeIsolated { Player.shared.open(urls) }
+    }
+
+    /// Only the app with its window gets here — the `--probe` and `--list` runs never do, so they
+    /// never ask the update server.
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        MainActor.assumeIsolated { Updates.shared.start() }
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { true }
